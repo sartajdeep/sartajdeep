@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Aalok Thakkar</title>
+    <link rel="icon" href="data:," />
+
+    <link
+      rel="stylesheet"
+      href="/webpage_files/style.css"
+      type="text/css"
+      media="screen"
+    />
+
+    <style>
+      #quote-container {
+        font-size: 14px;
+        text-align: center;
+        margin: 20px auto;
+        max-width: 500px;
+      }
+      .report-button {
+        margin-top: 12px;
+        display: inline-block;
+        padding: 6px 14px;
+        background: #eee;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #000;
+        font-size: 13px;
+        border: 1px solid #ccc;
+      }
+      .report-button:hover {
+        background: #ddd;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="content" class="single">
+      <h1>
+        <a href="/index.html">Aalok Thakkar</a>: <strong>Error 404</strong>
+      </h1>
+
+      <p style="text-align: center;">
+        The page you are looking for does not exist.
+      </p>
+
+      <div id="quote-container"></div>
+    </div>
+
+
+    <div id="footer"></div>
+
+    <script>
+      const quotes = [
+        `sirf ek qadam utha tha ghalat rah-e-shauq men <br> manzil tamam umr mujhe dhundhti rahi <br> - Abdul Hamid Adam`,
+        `koi manzil ke qarib aa ke bhatak jaata hai <br> koi manzil pe pahunchta hai bhatak jaane se <br> - Qasri Kanpuri`,
+        `na mila tira pata to mujhe log kya kahenge <br> yunhi dar-ba-dar raha to mujhe log kya kahenge <br> - Betab Lakhnavi`,
+        `hum wahan hain jahan se hum ko bhi <br> kuchh hamari khabar nahin aati <br> - Mirza Ghalib`,
+        `kisi ko ghar se nikalte hii mil gai manzil <br> koi hamaari tarah umr bhar safar men raha <br> - Ahmad Faraz`,
+        `nahin nigaah men manzil to justujuu hi sahi <br> nahin visaal mayassar to aarzu hi sahi <br> - Faiz Ahmad Faiz`,
+        `mire raahbar mujh ko gumraah kar de <br> suna hai ki manzil qarib aa gai hai <br> - Khumar Barabankavi`,
+      ];
+
+      function displayRandomQuote() {
+        const quoteContainer = document.getElementById("quote-container");
+        const randomIndex = Math.floor(Math.random() * quotes.length);
+
+        const poemHTML = `<div>${quotes[randomIndex]}</div>`;
+
+        const reportHTML = `
+          <br><br><a
+            class="report-button"
+            href="mailto:thakkar@ashoka.edu.in?subject=Broken%20Link%20Report&body=I%20found%20a%20broken%20link%20on%20the%20404%20page.%20The%20URL%20I%20was%20trying%20to%20reach%20was:%20"
+          >Report a Broken Link</a>
+        `;
+
+        quoteContainer.innerHTML = poemHTML + reportHTML;
+      }
+
+      displayRandomQuote();
+      setInterval(displayRandomQuote, 12000);
+    </script>
+
+
+<script>
+  fetch("/webpage_files/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('footer').innerHTML = data;
+    });
+  </script>
+  </body>
+</html>
