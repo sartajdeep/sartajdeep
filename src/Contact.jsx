@@ -2,25 +2,25 @@ import { useState } from 'react';
 
 function Contact() {
   const photoData = [
-    { id: 1, src: '/Photos/bio.JPG', alt: 'In the picture - Sartajdeep Singh with Avni Gaur, Kanav Nanda, and Atri Tejaswi during Biomimicry class.' },
-    { id: 2, src: '/Photos/class2.jpg', alt: 'Group photo at Spring Blossom School, Class 2.' },
-    { id: 3, src: '/Photos/class12.jpg', alt: 'Group photo at Spring Dale Senior School, Class 12.' },
-    { id: 4, src: '/Photos/delhigurudwara.jpg', alt: 'Group photo at Gurudwara Bangla Sahib, Delhi.' },
-    { id: 5, src: '/Photos/fieldvisit.JPG', alt: 'In the picture - Sartajdeep Singh with Rudra Satwik and Shourrya Gupta during a field visit.' },
-    { id: 6, src: '/Photos/gaganhasteer.jpg', alt: 'In the picture - Sartajdeep Singh with Gagan Hasteer (VP Content @ Netflix). ' },
-    { id: 7, src: '/Photos/goldentemple.jpg', alt: 'Photo at Golden Temple.' },
-    { id: 8, src: '/Photos/jefries.jpg', alt: 'Photo with Jeffries.' },
-    { id: 9, src: '/Photos/lalitagarwal.jpg', alt: 'Photo with Lalit Agarwal and Mukul Agarwal.' },
-    { id: 10, src: '/Photos/LKG.jpg', alt: 'Photo from LKG (Lower Kindergarten).' },
-    { id: 11, src: '/Photos/lohri.jpg', alt: 'Photo during Lohri celebration.' },
-    { id: 12, src: '/Photos/mathlab.jpg', alt: 'Photo from Math Lab.' },
-    { id: 13, src: '/Photos/mechatronics.JPG', alt: 'Photo from Mechatronics class.' },
-    { id: 14, src: '/Photos/mohitthukral.jpg', alt: 'Photo with Mohit Thukral.' },
-    { id: 15, src: '/Photos/mumbai.jpg', alt: 'Photo from Mumbai.' },
-    { id: 16, src: '/Photos/neerajaggarwal.jpg', alt: 'Photo with Neeraj Aggarwal.' },
-    { id: 17, src: '/Photos/neerajwife.jpg', alt: 'Photo with Neeraj\'s wife.' },
-    { id: 18, src: '/Photos/springdale.jpg', alt: 'Photo from Spring Dale School.' },
-    { id: 19, src: '/Photos/ug24.JPG', alt: 'Photo with UG 24 batch at Plaksha University.' }
+    { id: 1, src: './Photos/bio.JPG', alt: 'In the picture - Sartajdeep Singh with Avni Gaur, Kanav Nanda, and Atri Tejaswi during Biomimicry class.' },
+    { id: 2, src: './Photos/class2.jpg', alt: 'Group photo at Spring Blossom School, Class 2.' },
+    { id: 3, src: './Photos/class12.jpg', alt: 'Group photo at Spring Dale Senior School, Class 12.' },
+    { id: 4, src: './Photos/delhigurudwara.jpg', alt: 'Group photo at Gurudwara Bangla Sahib, Delhi.' },
+    { id: 5, src: './Photos/fieldvisit.JPG', alt: 'In the picture - Sartajdeep Singh with Rudra Satwik and Shourrya Gupta during a field visit.' },
+    { id: 6, src: './Photos/gaganhasteer.jpg', alt: 'In the picture - Sartajdeep Singh with Gagan Hasteer (VP Content @ Netflix). ' },
+    { id: 7, src: './Photos/goldentemple.jpg', alt: 'Photo at Golden Temple.' },
+    { id: 8, src: './Photos/jefries.jpg', alt: 'Photo with Jeffries.' },
+    { id: 9, src: './Photos/lalitagarwal.jpg', alt: 'Photo with Lalit Agarwal and Mukul Agarwal.' },
+    { id: 10, src: './Photos/LKG.jpg', alt: 'Photo from LKG (Lower Kindergarten).' },
+    { id: 11, src: './Photos/lohri.jpg', alt: 'Photo during Lohri celebration.' },
+    { id: 12, src: './Photos/mathlab.jpg', alt: 'Photo from Math Lab.' },
+    { id: 13, src: './Photos/mechatronics.JPG', alt: 'Photo from Mechatronics class.' },
+    { id: 14, src: './Photos/mohitthukral.jpg', alt: 'Photo with Mohit Thukral.' },
+    { id: 15, src: './Photos/mumbai.jpg', alt: 'Photo from Mumbai.' },
+    { id: 16, src: './Photos/neerajaggarwal.jpg', alt: 'Photo with Neeraj Aggarwal.' },
+    { id: 17, src: './Photos/neerajwife.jpg', alt: 'Photo with Neeraj\'s wife.' },
+    { id: 18, src: './Photos/springdale.jpg', alt: 'Photo from Spring Dale School.' },
+    { id: 19, src: './Photos/ug24.JPG', alt: 'Photo with UG 24 batch at Plaksha University.' }
   ];
 
   // We duplicate the photos once to create a seamless infinite scrolling loop
@@ -35,7 +35,7 @@ function Contact() {
 
       <div style={{ gridColumn: '1 / -1', textAlign: 'center', marginBottom: '40px' }}>
         <img 
-          src="/plaksha_group_pic.jpeg" 
+          src="./plaksha_group_pic.jpeg" 
           alt="Group photo of Plaksha University students (UG 24), including Sartajdeep Singh" 
           style={{ width: '100%', maxWidth: '100%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '5px' }} 
         />
@@ -53,7 +53,7 @@ function Contact() {
 
         <div className="entry">
           <strong>Links:</strong><br /><br />
-          <a href="/Resume.pdf" target="_blank" rel="noreferrer">Curriculum Vitae</a><br />
+          <a href="./Resume.pdf" target="_blank" rel="noreferrer">Curriculum Vitae</a><br />
           <a href="https://github.com/sartajdeep" target="_blank" rel="noreferrer">GitHub</a><br />
           <a href="https://www.linkedin.com/in/sartajdeep-singh-/" target="_blank" rel="noreferrer">LinkedIn</a><br />
         </div>

@@ -1,8 +1,8 @@
 function Home() {
   return (
     <div id="content">
-      <div className="left">
-          <img src="/SARTAJDEEP_SINGH.PHOTO.png" alt="Sartajdeep Singh" />
+        <div className="left">
+          <img src="./SARTAJDEEP_SINGH.PHOTO.png" alt="Sartajdeep Singh" />
           <p style={{ textAlign: 'center' }}>
             <a href="mailto:sartajdeep.s.ug24@plaksha.edu.in" target="_blank" rel="noreferrer">sartajdeep.s.ug24@plaksha.edu.in</a>
           </p>
@@ -21,7 +21,7 @@ function Home() {
           </p>
           <hr></hr>
           <p style={{ textAlign: 'center', whiteSpace: 'nowrap', marginTop: '1em', fontSize: '1.2em', color: '#000000' }}>
-            LinkedIn: <a href="https://www.linkedin.com/in/sartajdeep-singh/" target="_blank" rel="noreferrer">LinkedIn</a> | GitHub: <a href="https://github.com/sartajdeep" target="_blank" rel="noreferrer">GitHub</a> | Resume: <a href="/Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
+            LinkedIn: <a href="https://www.linkedin.com/in/sartajdeep-singh/" target="_blank" rel="noreferrer">LinkedIn</a> | GitHub: <a href="https://github.com/sartajdeep" target="_blank" rel="noreferrer">GitHub</a> | Resume: <a href="./Resume.pdf" target="_blank" rel="noreferrer">Resume</a>
           </p>
 
         </div>
