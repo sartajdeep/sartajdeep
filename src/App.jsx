@@ -4,6 +4,7 @@ import Research from './Research';
 import Experience from './Experience';
 import Projects from './Projects';
 import Contact from './Contact';
+import Acknowledgements from './Acknowledgements';
 
 function Header({ currentPath, navigate }) {
   const normalizedPath = currentPath.toLowerCase();
@@ -13,6 +14,7 @@ function Header({ currentPath, navigate }) {
     if (path.includes('experience') && normalizedPath.includes('experience')) return true;
     if (path.includes('projects') && normalizedPath.includes('projects')) return true;
     if (path.includes('contact') && normalizedPath.includes('contact')) return true;
+    if (path.includes('acknowledgements') && normalizedPath.includes('acknowledgements')) return true;
     return false;
   };
 
@@ -21,6 +23,7 @@ function Header({ currentPath, navigate }) {
     { label: 'EXPERIENCE', href: '#/experience' },
     { label: 'PROJECTS', href: '#/projects' },
     { label: 'CONTACT', href: '#/contact' },
+    { label: 'ACKNOWLEDGEMENTS', href: '#/acknowledgements' },
   ];
 
   return (
@@ -120,8 +123,9 @@ function App() {
   const isExperience = normalizedPath.includes('experience');
   const isProjects = normalizedPath.includes('projects');
   const isContact = normalizedPath.includes('contact');
+  const isAcknowledgements = normalizedPath.includes('acknowledgements');
 
-  const isHome = !isResearch && !isExperience && !isProjects && !isContact;
+  const isHome = !isResearch && !isExperience && !isProjects && !isContact && !isAcknowledgements;
 
   let PageContent = <Home navigate={navigate} Link={Link} />;
   if (isResearch) {
@@ -132,6 +136,8 @@ function App() {
     PageContent = <Projects navigate={navigate} Link={Link} />;
   } else if (isContact) {
     PageContent = <Contact navigate={navigate} Link={Link} />;
+  } else if (isAcknowledgements) {
+    PageContent = <Acknowledgements navigate={navigate} Link={Link} />;
   }
 
   return (
@@ -151,7 +157,7 @@ function App() {
       {PageContent}
 
       <div id="footer">
-        <Link href="#/">main</Link> | <Link href="#/research">research</Link> | <Link href="#/experience">experience</Link> | <Link href="#/projects">Projects</Link> | <Link href="#/contact">contact and bio</Link>
+        <Link href="#/">main</Link> | <Link href="#/research">research</Link> | <Link href="#/experience">experience</Link> | <Link href="#/projects">Projects</Link> | <Link href="#/contact">contact and bio</Link> | <Link href="#/acknowledgements">acknowledgements</Link>
       </div>
     </>
   );
