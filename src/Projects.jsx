@@ -2,16 +2,10 @@ function Projects() {
   return (
     <div id="content" className="single-wide">
       <h1 className="main-title">
-        Sartajdeep Singh | Projects<br />
-        <span style={{ fontSize: '0.59em', fontWeight: 'normal', letterSpacing: '0.05em', display: 'inline-block', marginTop: '-0.7em' }}>
-          BTech in Computer Science and Artificial Intelligence (CSAI), Plaksha University
-        </span>
+        Projects
       </h1>
 
       <div className="entry" style={{ gridColumn: '1 / -1', marginTop: '10px' }}>
-        
-        <h2> Projects</h2>
-
         <h3>CEO Project <span style={{ fontSize: '0.8em', fontWeight: '300', float: 'right' }}>Feb 2026 &ndash; Present</span></h3>
         <p><em>Collaborators: <a href="mailto:prakarsh.singh@plaksha.edu.in" target="_blank" rel="noreferrer">Dr. Prakarsh Singh</a>, <a href="mailto:anshika.arora@plaksha.edu.in" target="_blank" rel="noreferrer">Ms. Anshika Arora</a></em></p>
         <ul>

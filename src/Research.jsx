@@ -1,12 +1,8 @@
 function Research() {
   return (
     <div id="content" className="single-wide">
-      <h1 className="main-title" >
-      
-        Sartajdeep Singh | Research <br />
-        <span style={{ fontSize: '0.5em', fontWeight: 'normal', letterSpacing: '0.05em', display: 'inline-block', marginTop: '-0.7em' }}>
-          BTech in Computer Science and Artificial Intelligence (CSAI), Plaksha University
-        </span>
+      <h1 className="main-title">
+        Research
       </h1>
 
       <div className="entry" style={{ gridColumn: '1 / -1', marginTop: '40px' }}>

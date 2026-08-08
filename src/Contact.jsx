@@ -30,7 +30,7 @@ function Contact() {
   return (
     <div id="content">
       <h1 className="main-title" style={{ gridColumn: '1 / -1' }}>
-        Sartajdeep Singh: Contact & Bio
+        Contact & Bio
       </h1>
 
       <div style={{ gridColumn: '1 / -1', textAlign: 'center', marginBottom: '40px' }}>
