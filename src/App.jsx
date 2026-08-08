@@ -8,27 +8,27 @@ function Header({ currentPath, navigate }) {
   const normalizedPath = currentPath.toLowerCase();
 
   const isLinkActive = (path) => {
-    if (path === '/research' && (normalizedPath === '/research' || normalizedPath === '/research.html')) return true;
-    if (path === '/projects' && (normalizedPath === '/projects' || normalizedPath === '/projects.html')) return true;
-    if (path === '/contact' && (normalizedPath === '/contact' || normalizedPath === '/contact.html')) return true;
+    if (path.includes('research') && normalizedPath.includes('research')) return true;
+    if (path.includes('projects') && normalizedPath.includes('projects')) return true;
+    if (path.includes('contact') && normalizedPath.includes('contact')) return true;
     return false;
   };
 
   const navItems = [
-    { label: 'RESEARCH', href: '/research' },
+    { label: 'RESEARCH', href: '#/research' },
     { label: 'RESUME (dl)', href: './Resume.pdf', external: true, download: true },
-    { label: 'PROJECTS', href: '/projects' },
-    { label: 'CONTACT', href: '/contact' },
+    { label: 'PROJECTS', href: '#/projects' },
+    { label: 'CONTACT', href: '#/contact' },
   ];
 
   return (
     <header className="site-header">
       <div className="header-brand">
         <a 
-          href="/" 
+          href="#/" 
           onClick={(e) => {
             e.preventDefault();
-            navigate('/');
+            navigate('#/');
           }}
           className="brand-title"
         >
@@ -77,27 +77,32 @@ function Header({ currentPath, navigate }) {
 }
 
 function App() {
-  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+  const getHashPath = () => window.location.hash || '#/';
+  const [currentPath, setCurrentPath] = useState(getHashPath());
 
-  // Handle browser back and forward buttons
   useEffect(() => {
-    const handlePopState = () => setCurrentPath(window.location.pathname);
-    window.addEventListener('popstate', handlePopState);
-    return () => window.removeEventListener('popstate', handlePopState);
+    const handleHashChange = () => setCurrentPath(window.location.hash || '#/');
+    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener('popstate', handleHashChange);
+    return () => {
+      window.removeEventListener('hashchange', handleHashChange);
+      window.removeEventListener('popstate', handleHashChange);
+    };
   }, []);
 
   const navigate = (path) => {
-    window.history.pushState({}, '', path);
-    setCurrentPath(path);
+    const targetHash = path.startsWith('#') ? path : `#${path}`;
+    window.location.hash = targetHash;
+    setCurrentPath(targetHash);
   };
 
   const Link = ({ href, children, style, className }) => (
     <a 
-      href={href} 
+      href={href.startsWith('#') || href.startsWith('http') || href.startsWith('.') ? href : `#${href}`} 
       className={className}
       style={style}
       onClick={(e) => {
-        if (href.startsWith('/')) {
+        if (!href.startsWith('http') && !href.startsWith('.')) {
           e.preventDefault();
           navigate(href);
         }
@@ -109,9 +114,9 @@ function App() {
 
   const normalizedPath = currentPath.toLowerCase();
 
-  const isResearch = normalizedPath.endsWith('/research') || normalizedPath.endsWith('/research.html');
-  const isProjects = normalizedPath.endsWith('/projects') || normalizedPath.endsWith('/projects.html');
-  const isContact = normalizedPath.endsWith('/contact') || normalizedPath.endsWith('/contact.html');
+  const isResearch = normalizedPath.includes('research');
+  const isProjects = normalizedPath.includes('projects');
+  const isContact = normalizedPath.includes('contact');
 
   const isHome = !isResearch && !isProjects && !isContact;
 
@@ -129,7 +134,7 @@ function App() {
       {!isHome && (
         <button 
           className="back-to-home" 
-          onClick={() => navigate('/')} 
+          onClick={() => navigate('#/')} 
           aria-label="Back to home"
         >
           &#8249;&#8249;
@@ -141,7 +146,7 @@ function App() {
       {PageContent}
 
       <div id="footer">
-        <Link href="/">main</Link> | <Link href="/research">research</Link> | <a href="./Resume.pdf" target="_blank" rel="noreferrer">Resume</a> (<a href="./Resume.pdf" download>dl</a>) | <Link href="/projects">Projects</Link> | <Link href="/contact">contact and bio</Link>
+        <Link href="#/">main</Link> | <Link href="#/research">research</Link> | <a href="./Resume.pdf" target="_blank" rel="noreferrer">Resume</a> (<a href="./Resume.pdf" download>dl</a>) | <Link href="#/projects">Projects</Link> | <Link href="#/contact">contact and bio</Link>
       </div>
     </>
   );
