@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Home from './Home';
 import Research from './Research';
+import Experience from './Experience';
 import Projects from './Projects';
 import Contact from './Contact';
 
@@ -9,6 +10,7 @@ function Header({ currentPath, navigate }) {
 
   const isLinkActive = (path) => {
     if (path.includes('research') && normalizedPath.includes('research')) return true;
+    if (path.includes('experience') && normalizedPath.includes('experience')) return true;
     if (path.includes('projects') && normalizedPath.includes('projects')) return true;
     if (path.includes('contact') && normalizedPath.includes('contact')) return true;
     return false;
@@ -16,6 +18,7 @@ function Header({ currentPath, navigate }) {
 
   const navItems = [
     { label: 'RESEARCH', href: '#/research' },
+    { label: 'EXPERIENCE', href: '#/experience' },
     { label: 'PROJECTS', href: '#/projects' },
     { label: 'CONTACT', href: '#/contact' },
   ];
@@ -114,14 +117,17 @@ function App() {
   const normalizedPath = currentPath.toLowerCase();
 
   const isResearch = normalizedPath.includes('research');
+  const isExperience = normalizedPath.includes('experience');
   const isProjects = normalizedPath.includes('projects');
   const isContact = normalizedPath.includes('contact');
 
-  const isHome = !isResearch && !isProjects && !isContact;
+  const isHome = !isResearch && !isExperience && !isProjects && !isContact;
 
   let PageContent = <Home navigate={navigate} Link={Link} />;
   if (isResearch) {
     PageContent = <Research navigate={navigate} Link={Link} />;
+  } else if (isExperience) {
+    PageContent = <Experience navigate={navigate} Link={Link} />;
   } else if (isProjects) {
     PageContent = <Projects navigate={navigate} Link={Link} />;
   } else if (isContact) {
@@ -145,7 +151,7 @@ function App() {
       {PageContent}
 
       <div id="footer">
-        <Link href="#/">main</Link> | <Link href="#/research">research</Link> | <Link href="#/projects">Projects</Link> | <Link href="#/contact">contact and bio</Link>
+        <Link href="#/">main</Link> | <Link href="#/research">research</Link> | <Link href="#/experience">experience</Link> | <Link href="#/projects">Projects</Link> | <Link href="#/contact">contact and bio</Link>
       </div>
     </>
   );
