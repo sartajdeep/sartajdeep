@@ -108,14 +108,19 @@ function App() {
   );
 
   const normalizedPath = currentPath.toLowerCase();
-  const isHome = normalizedPath === '/' || normalizedPath === '/index.html';
+
+  const isResearch = normalizedPath.endsWith('/research') || normalizedPath.endsWith('/research.html');
+  const isProjects = normalizedPath.endsWith('/projects') || normalizedPath.endsWith('/projects.html');
+  const isContact = normalizedPath.endsWith('/contact') || normalizedPath.endsWith('/contact.html');
+
+  const isHome = !isResearch && !isProjects && !isContact;
 
   let PageContent = <Home navigate={navigate} Link={Link} />;
-  if (normalizedPath === '/research' || normalizedPath === '/research.html') {
+  if (isResearch) {
     PageContent = <Research navigate={navigate} Link={Link} />;
-  } else if (normalizedPath === '/projects' || normalizedPath === '/projects.html') {
+  } else if (isProjects) {
     PageContent = <Projects navigate={navigate} Link={Link} />;
-  } else if (normalizedPath === '/contact' || normalizedPath === '/contact.html') {
+  } else if (isContact) {
     PageContent = <Contact navigate={navigate} Link={Link} />;
   }
 
