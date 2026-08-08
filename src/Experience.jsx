@@ -19,7 +19,7 @@ function Experience() {
         <h3>Management Fellow Intern<span style={{ fontSize: '0.8em', fontWeight: '300', float: 'right' }}>May 2026 &ndash; June 2026</span></h3>
         <p><em>YTS+ @ Plaksha University, Mohali</em></p>
         <ul>
-          <li>Facilitated the engagement and well-being of a cohort of<b>380+ students</b> through continuous mentorship, academic guidance, and support during program activities.</li>
+          <li>Facilitated the engagement and well-being of a cohort of<b> 380+ students</b> through continuous mentorship, academic guidance, and support during program activities.</li>
           <li>Ensured smooth execution of workshops, speaker sessions, and student events by coordinating logistics, participant communication, and operational requirements across the programme.</li>
         </ul>
         <hr />
