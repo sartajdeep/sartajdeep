@@ -30,14 +30,14 @@ function Acknowledgements() {
           A special mention to the wonderful students I had the privilege to mentor during <strong>YTS+</strong>. They taught me so much, were exceptionally respectful, and made the experience truly unforgettable &mdash; even forming a football team named <strong>Sartaj FC</strong> ❤️:
         </p>
         <p style={{ lineHeight: '1.8em' }}>
-          Vijith Kapoor, Vishvag Taneja, Shiv Ahuja, Rishi Gupta, Abhaya Singh, Advik, Anjaney Pandey, Zoharfateh Singh Deepak, Nalin Chandra, Reyansh Chaudhari, Niyant, Sarthak Singla, Reyansh Aggarwalla, Mahir Goradia.
+          Vijith Kapoor, Vishvag Taneja, Shiv Ahuja, Rishi Gupta, Abhaya Singh, Advik Shanker Agarwal, Anjaney Pandey, Zoharfateh Singh Deepak, Nalin Chandra, Reyansh Chaudhari, Niyant, Sarthak Singla, Reyansh Agarwalla, Mahir Goradia.
         </p>
         <hr />
 
         <h3>Friends & College Life</h3>
         <ul>
           <li>
-            <strong>Kanav Nanda</strong> &ndash; My best friend in college, grateful for his constant presence and support.
+            <strong>Kanav Nanda</strong> &ndash; My best; grateful for his constant presence and support.
           </li>
           <li>
             <strong>School Friends</strong> &ndash; Pulkit Sareen, Ananya Singh, Jivteshwar Singh, Oj Singh Dhillon, Amaan Mehra. Grateful to have every single one of them in my life.
