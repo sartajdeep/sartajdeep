@@ -53,7 +53,6 @@ function Contact() {
 
         <div className="entry">
           <strong>Links:</strong><br /><br />
-          <a href="./Resume.pdf" target="_blank" rel="noreferrer">Curriculum Vitae</a><br />
           <a href="https://github.com/sartajdeep" target="_blank" rel="noreferrer">GitHub</a><br />
           <a href="https://www.linkedin.com/in/sartajdeep-singh-/" target="_blank" rel="noreferrer">LinkedIn</a><br />
         </div>

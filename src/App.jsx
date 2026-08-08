@@ -16,7 +16,6 @@ function Header({ currentPath, navigate }) {
 
   const navItems = [
     { label: 'RESEARCH', href: '#/research' },
-    { label: 'RESUME (dl)', href: './Resume.pdf', external: true, download: true },
     { label: 'PROJECTS', href: '#/projects' },
     { label: 'CONTACT', href: '#/contact' },
   ];
@@ -146,7 +145,7 @@ function App() {
       {PageContent}
 
       <div id="footer">
-        <Link href="#/">main</Link> | <Link href="#/research">research</Link> | <a href="./Resume.pdf" target="_blank" rel="noreferrer">Resume</a> (<a href="./Resume.pdf" download>dl</a>) | <Link href="#/projects">Projects</Link> | <Link href="#/contact">contact and bio</Link>
+        <Link href="#/">main</Link> | <Link href="#/research">research</Link> | <Link href="#/projects">Projects</Link> | <Link href="#/contact">contact and bio</Link>
       </div>
     </>
   );
