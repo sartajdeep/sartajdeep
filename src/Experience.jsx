@@ -7,7 +7,7 @@ function Experience() {
 
       <div className="entry" style={{ gridColumn: '1 / -1', marginTop: '40px' }}>
 
-       <h3>Research Intern<span style={{ fontSize: '0.8em', fontWeight: '300', float: 'right' }}>June 2026 &ndash; Present</span></h3>
+        <h3>Research Intern <span className="entry-date">June 2026 &ndash; Present</span></h3>
         <p><em>Plaksha University, Mohali</em></p>
         <ul>
           <li>Built a structured dataset on boardroom composition covering 15K+ top executives across publicly listed Indian firms, consolidating executive-level regulatory disclosures and automating standardization workflows for scalability.</li>
@@ -16,7 +16,7 @@ function Experience() {
         </ul>
         <hr />
 
-        <h3>Management Fellow Intern<span style={{ fontSize: '0.8em', fontWeight: '300', float: 'right' }}>May 2026 &ndash; June 2026</span></h3>
+        <h3>Management Fellow Intern <span className="entry-date">May 2026 &ndash; June 2026</span></h3>
         <p><em>YTS+ @ Plaksha University, Mohali</em></p>
         <ul>
           <li>Facilitated the engagement and well-being of a cohort of<b> 380+ students</b> through continuous mentorship, academic guidance, and support during program activities.</li>
@@ -24,7 +24,7 @@ function Experience() {
         </ul>
         <hr />
 
-        <h3>Lead Outreach, and program Promotion <span style={{ fontSize: '0.8em', fontWeight: '300', float: 'right' }}>Jan 2026 &ndash; May 2026</span></h3>
+        <h3>Lead Outreach, and program Promotion <span className="entry-date">Jan 2026 &ndash; May 2026</span></h3>
         <p><em>MSAI @ Plaksha University, Mohali</em></p>
         <ul>
           <li>Generated <b>100+ qualified applications</b> for the inaugural MS in AI cohort through targeted outreach and digital promotion campaigns.</li>
