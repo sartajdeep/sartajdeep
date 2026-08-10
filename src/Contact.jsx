@@ -2,55 +2,54 @@ import { useState } from 'react';
 
 function Contact() {
   const photoData = [
-    // Original Photos
-    { id: 1, src: './Photos/bio.JPG', alt: 'Sartajdeep Singh with Avni Gaur, Kanav Nanda, and Atri Tejaswi during Biomimicry class.' },
-    { id: 2, src: './Photos/class2.jpg', alt: 'Group photo at Spring Blossom School, Class 2.' },
-    { id: 3, src: './Photos/class12.jpg', alt: 'Group photo at Spring Dale Senior School, Class 12.' },
-    { id: 4, src: './Photos/delhigurudwara.jpg', alt: 'Group photo at Gurudwara Bangla Sahib, Delhi.' },
-    { id: 5, src: './Photos/fieldvisit.JPG', alt: 'Sartajdeep Singh with Rudra Satwik and Shourrya Gupta during field visit.' },
-    { id: 6, src: './Photos/gaganhasteer.jpg', alt: 'Sartajdeep Singh with Gagan Hasteer (VP Content @ Netflix).' },
-    { id: 7, src: './Photos/goldentemple.jpg', alt: 'Golden Temple, Amritsar.' },
-    { id: 8, src: './Photos/jefries.jpg', alt: 'Photo with Jeffries.' },
-    { id: 9, src: './Photos/lalitagarwal.jpg', alt: 'Photo with Lalit Agarwal and Mukul Agarwal.' },
-    { id: 10, src: './Photos/LKG.jpg', alt: 'LKG (Lower Kindergarten).' },
-    { id: 11, src: './Photos/lohri.jpg', alt: 'Lohri celebration.' },
-    { id: 12, src: './Photos/mathlab.jpg', alt: 'Math Lab at Spring Dale.' },
-    { id: 13, src: './Photos/mechatronics.JPG', alt: 'Mechatronics class at Plaksha.' },
-    { id: 14, src: './Photos/mohitthukral.jpg', alt: 'Photo with Mohit Thukral.' },
-    { id: 15, src: './Photos/mumbai.jpg', alt: 'Mumbai.' },
-    { id: 16, src: './Photos/neerajaggarwal.jpg', alt: 'Photo with Neeraj Aggarwal.' },
-    { id: 17, src: './Photos/neerajwife.jpg', alt: 'Photo with Neeraj\'s wife.' },
-    { id: 18, src: './Photos/springdale.jpg', alt: 'Spring Dale Senior School.' },
-    { id: 19, src: './Photos/ug24.JPG', alt: 'UG 24 batch at Plaksha University.' },
+    // Originals
+    { id: 1, src: './Photos/bio.JPG', alt: 'Sartajdeep Singh with Avni Gaur, Kanav Nanda, and Atri Tejaswi during Biomimicry class' },
+    { id: 2, src: './Photos/class2.jpg', alt: 'Group photo at Spring Blossom School, Class 2' },
+    { id: 3, src: './Photos/class12.jpg', alt: 'Group photo at Spring Dale Senior School, Class 12' },
+    { id: 4, src: './Photos/delhigurudwara.jpg', alt: 'Group photo at Gurudwara Bangla Sahib, Delhi' },
+    { id: 5, src: './Photos/fieldvisit.JPG', alt: 'Sartajdeep Singh with Rudra Satwik and Shourrya Gupta during field visit' },
+    { id: 6, src: './Photos/gaganhasteer.jpg', alt: 'Sartajdeep Singh with Gagan Hasteer (VP Content @ Netflix)' },
+    { id: 7, src: './Photos/goldentemple.jpg', alt: 'Golden Temple, Amritsar' },
+    { id: 8, src: './Photos/jefries.jpg', alt: 'Photo with Jeffries' },
+    { id: 9, src: './Photos/lalitagarwal.jpg', alt: 'Photo with Lalit Agarwal and Mukul Agarwal' },
+    { id: 10, src: './Photos/LKG.jpg', alt: 'LKG (Lower Kindergarten)' },
+    { id: 11, src: './Photos/lohri.jpg', alt: 'Lohri celebration' },
+    { id: 12, src: './Photos/mathlab.jpg', alt: 'Math Lab at Spring Dale' },
+    { id: 13, src: './Photos/mechatronics.JPG', alt: 'Mechatronics class at Plaksha' },
+    { id: 14, src: './Photos/mohitthukral.jpg', alt: 'Photo with Mohit Thukral' },
+    { id: 15, src: './Photos/mumbai.jpg', alt: 'Mumbai' },
+    { id: 16, src: './Photos/neerajaggarwal.jpg', alt: 'Photo with Neeraj Aggarwal' },
+    { id: 17, src: './Photos/neerajwife.jpg', alt: 'Photo with Neeraj\'s wife' },
+    { id: 18, src: './Photos/springdale.jpg', alt: 'Spring Dale Senior School' },
+    { id: 19, src: './Photos/ug24.JPG', alt: 'UG 24 batch at Plaksha University' },
 
-    // New Photos
-    { id: 20, src: './new_pics/F3016BF6-EB1D-4961-9C6D-0CD9521C5624.jpeg', alt: 'Memory' },
-    { id: 21, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.17 PM.jpeg', alt: 'Memory' },
-    { id: 22, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (1).jpeg', alt: 'Memory' },
-    { id: 23, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (2).jpeg', alt: 'Memory' },
-    { id: 24, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (3).jpeg', alt: 'Memory' },
-    { id: 25, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (4).jpeg', alt: 'Memory' },
-    { id: 26, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (5).jpeg', alt: 'Memory' },
-    { id: 27, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (6).jpeg', alt: 'Memory' },
-    { id: 28, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (7).jpeg', alt: 'Memory' },
-    { id: 29, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (8).jpeg', alt: 'Memory' },
-    { id: 30, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (9).jpeg', alt: 'Memory' },
-    { id: 31, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (10).jpeg', alt: 'Memory' },
-    { id: 32, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (11).jpeg', alt: 'Memory' },
-    { id: 33, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM.jpeg', alt: 'Memory' },
-    { id: 34, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (1).jpeg', alt: 'Memory' },
-    { id: 35, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (2).jpeg', alt: 'Memory' },
-    { id: 36, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (3).jpeg', alt: 'Memory' },
-    { id: 37, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (4).jpeg', alt: 'Memory' },
-    { id: 38, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (5).jpeg', alt: 'Memory' },
-    { id: 39, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (6).jpeg', alt: 'Memory' },
-    { id: 40, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (7).jpeg', alt: 'Memory' },
-    { id: 41, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (8).jpeg', alt: 'Memory' },
-    { id: 42, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (9).jpeg', alt: 'Memory' },
-    { id: 43, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (10).jpeg', alt: 'Memory' },
-    { id: 44, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (11).jpeg', alt: 'Memory' },
-    { id: 45, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (12).jpeg', alt: 'Memory' },
-    { id: 46, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM.jpeg', alt: 'Memory' }
+    // New Additions
+    { id: 20, src: './Photos/Abhaya, Nalin and Sartaj.jpeg', alt: 'Abhaya, Nalin and Sartaj' },
+    { id: 21, src: "./Photos/Amaan's poster.jpeg", alt: "Amaan's poster" },
+    { id: 22, src: './Photos/Anjaney and Friends at exibition.jpeg', alt: 'Anjaney and Friends at exhibition' },
+    { id: 23, src: './Photos/Avni, Kanav & Sartaj.jpeg', alt: 'Avni, Kanav & Sartaj' },
+    { id: 24, src: './Photos/Field Visit with Group 32- Ishita, Hussein, Mannan Sharma.jpeg', alt: 'Field Visit with Group 32 - Ishita, Hussein, Mannan Sharma' },
+    { id: 25, src: './Photos/Field Visit.jpeg', alt: 'Field Visit' },
+    { id: 26, src: './Photos/Fooling around with batchmates.jpeg', alt: 'Fooling around with batchmates' },
+    { id: 27, src: './Photos/GOAT Advik- winner of Badminton Doubles at YTS+ .jpeg', alt: 'GOAT Advik - winner of Badminton Doubles at YTS+' },
+    { id: 28, src: './Photos/GOAT kids @YTS+.jpeg', alt: 'GOAT kids @ YTS+' },
+    { id: 29, src: "./Photos/Kanav's Surprise Birthday Celebration.jpeg", alt: "Kanav's Surprise Birthday Celebration" },
+    { id: 30, src: './Photos/Nalin and Sartaj.jpeg', alt: 'Nalin and Sartaj' },
+    { id: 31, src: './Photos/Niyant and Sartaj.jpeg', alt: 'Niyant and Sartaj' },
+    { id: 32, src: "./Photos/Niyant's Phone wallpaper - with me .jpeg", alt: "Niyant's Phone wallpaper - with me" },
+    { id: 33, src: './Photos/Reyansh and Sartaj.jpeg', alt: 'Reyansh and Sartaj' },
+    { id: 34, src: './Photos/Reyansh, Sartaj and Sarthak (insider reference - GOTH).jpeg', alt: 'Reyansh, Sartaj and Sarthak (insider reference - GOTH)' },
+    { id: 35, src: './Photos/Sartaj and Abhaya.jpeg', alt: 'Sartaj and Abhaya' },
+    { id: 36, src: './Photos/Sartaj and Nalin.jpeg', alt: 'Sartaj and Nalin' },
+    { id: 37, src: './Photos/Sartaj and Sameera.jpeg', alt: 'Sartaj and Sameera' },
+    { id: 38, src: './Photos/Shiv and Sartaj.jpeg', alt: 'Shiv and Sartaj' },
+    { id: 39, src: './Photos/Vijith, Rishi showing around their YTS project.jpeg', alt: 'Vijith, Rishi showing around their YTS project' },
+    { id: 40, src: './Photos/Vishvag and Sartaj.jpeg', alt: 'Vishvag and Sartaj' },
+    { id: 41, src: './Photos/Vishvag, Vijith, Rishi with Sartaj .jpeg', alt: 'Vishvag, Vijith, Rishi with Sartaj' },
+    { id: 42, src: './Photos/With Atri at Navratri.jpeg', alt: 'With Atri at Navratri' },
+    { id: 43, src: './Photos/With cousins - random day cake cutting.jpeg', alt: 'With cousins - random day cake cutting' },
+    { id: 44, src: './Photos/YTS+.jpeg', alt: 'YTS+' },
+    { id: 45, src: './Photos/Zohar and Sartaj.jpeg', alt: 'Zohar and Sartaj' }
   ];
 
   const [selectedPhoto, setSelectedPhoto] = useState(null);
@@ -115,11 +114,9 @@ function Contact() {
                 alt={photo.alt}
                 loading="lazy"
               />
-              {photo.alt !== 'Memory' && (
-                <div className="photo-collage-caption">
-                  {photo.alt}
-                </div>
-              )}
+              <div className="photo-collage-caption">
+                {photo.alt}
+              </div>
             </div>
           ))}
         </div>
@@ -139,11 +136,9 @@ function Contact() {
               &times;
             </button>
             <img src={selectedPhoto.src} alt={selectedPhoto.alt} />
-            {selectedPhoto.alt !== 'Memory' && (
-              <div className="collage-lightbox-caption">
-                {selectedPhoto.alt}
-              </div>
-            )}
+            <div className="collage-lightbox-caption">
+              {selectedPhoto.alt}
+            </div>
           </div>
         </div>
       )}
