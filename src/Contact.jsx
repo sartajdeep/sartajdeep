@@ -2,30 +2,58 @@ import { useState } from 'react';
 
 function Contact() {
   const photoData = [
-    { id: 1, src: './Photos/bio.JPG', alt: 'In the picture - Sartajdeep Singh with Avni Gaur, Kanav Nanda, and Atri Tejaswi during Biomimicry class.' },
+    // Original Photos
+    { id: 1, src: './Photos/bio.JPG', alt: 'Sartajdeep Singh with Avni Gaur, Kanav Nanda, and Atri Tejaswi during Biomimicry class.' },
     { id: 2, src: './Photos/class2.jpg', alt: 'Group photo at Spring Blossom School, Class 2.' },
     { id: 3, src: './Photos/class12.jpg', alt: 'Group photo at Spring Dale Senior School, Class 12.' },
     { id: 4, src: './Photos/delhigurudwara.jpg', alt: 'Group photo at Gurudwara Bangla Sahib, Delhi.' },
-    { id: 5, src: './Photos/fieldvisit.JPG', alt: 'In the picture - Sartajdeep Singh with Rudra Satwik and Shourrya Gupta during a field visit.' },
-    { id: 6, src: './Photos/gaganhasteer.jpg', alt: 'In the picture - Sartajdeep Singh with Gagan Hasteer (VP Content @ Netflix). ' },
-    { id: 7, src: './Photos/goldentemple.jpg', alt: 'Photo at Golden Temple.' },
+    { id: 5, src: './Photos/fieldvisit.JPG', alt: 'Sartajdeep Singh with Rudra Satwik and Shourrya Gupta during field visit.' },
+    { id: 6, src: './Photos/gaganhasteer.jpg', alt: 'Sartajdeep Singh with Gagan Hasteer (VP Content @ Netflix).' },
+    { id: 7, src: './Photos/goldentemple.jpg', alt: 'Golden Temple, Amritsar.' },
     { id: 8, src: './Photos/jefries.jpg', alt: 'Photo with Jeffries.' },
     { id: 9, src: './Photos/lalitagarwal.jpg', alt: 'Photo with Lalit Agarwal and Mukul Agarwal.' },
-    { id: 10, src: './Photos/LKG.jpg', alt: 'Photo from LKG (Lower Kindergarten).' },
-    { id: 11, src: './Photos/lohri.jpg', alt: 'Photo during Lohri celebration.' },
-    { id: 12, src: './Photos/mathlab.jpg', alt: 'Photo from Math Lab.' },
-    { id: 13, src: './Photos/mechatronics.JPG', alt: 'Photo from Mechatronics class.' },
+    { id: 10, src: './Photos/LKG.jpg', alt: 'LKG (Lower Kindergarten).' },
+    { id: 11, src: './Photos/lohri.jpg', alt: 'Lohri celebration.' },
+    { id: 12, src: './Photos/mathlab.jpg', alt: 'Math Lab at Spring Dale.' },
+    { id: 13, src: './Photos/mechatronics.JPG', alt: 'Mechatronics class at Plaksha.' },
     { id: 14, src: './Photos/mohitthukral.jpg', alt: 'Photo with Mohit Thukral.' },
-    { id: 15, src: './Photos/mumbai.jpg', alt: 'Photo from Mumbai.' },
+    { id: 15, src: './Photos/mumbai.jpg', alt: 'Mumbai.' },
     { id: 16, src: './Photos/neerajaggarwal.jpg', alt: 'Photo with Neeraj Aggarwal.' },
     { id: 17, src: './Photos/neerajwife.jpg', alt: 'Photo with Neeraj\'s wife.' },
-    { id: 18, src: './Photos/springdale.jpg', alt: 'Photo from Spring Dale School.' },
-    { id: 19, src: './Photos/ug24.JPG', alt: 'Photo with UG 24 batch at Plaksha University.' }
+    { id: 18, src: './Photos/springdale.jpg', alt: 'Spring Dale Senior School.' },
+    { id: 19, src: './Photos/ug24.JPG', alt: 'UG 24 batch at Plaksha University.' },
+
+    // New Photos
+    { id: 20, src: './new_pics/F3016BF6-EB1D-4961-9C6D-0CD9521C5624.jpeg', alt: 'Memory' },
+    { id: 21, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.17 PM.jpeg', alt: 'Memory' },
+    { id: 22, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (1).jpeg', alt: 'Memory' },
+    { id: 23, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (2).jpeg', alt: 'Memory' },
+    { id: 24, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (3).jpeg', alt: 'Memory' },
+    { id: 25, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (4).jpeg', alt: 'Memory' },
+    { id: 26, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (5).jpeg', alt: 'Memory' },
+    { id: 27, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (6).jpeg', alt: 'Memory' },
+    { id: 28, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (7).jpeg', alt: 'Memory' },
+    { id: 29, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (8).jpeg', alt: 'Memory' },
+    { id: 30, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (9).jpeg', alt: 'Memory' },
+    { id: 31, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (10).jpeg', alt: 'Memory' },
+    { id: 32, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM (11).jpeg', alt: 'Memory' },
+    { id: 33, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.18 PM.jpeg', alt: 'Memory' },
+    { id: 34, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (1).jpeg', alt: 'Memory' },
+    { id: 35, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (2).jpeg', alt: 'Memory' },
+    { id: 36, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (3).jpeg', alt: 'Memory' },
+    { id: 37, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (4).jpeg', alt: 'Memory' },
+    { id: 38, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (5).jpeg', alt: 'Memory' },
+    { id: 39, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (6).jpeg', alt: 'Memory' },
+    { id: 40, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (7).jpeg', alt: 'Memory' },
+    { id: 41, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (8).jpeg', alt: 'Memory' },
+    { id: 42, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (9).jpeg', alt: 'Memory' },
+    { id: 43, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (10).jpeg', alt: 'Memory' },
+    { id: 44, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (11).jpeg', alt: 'Memory' },
+    { id: 45, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM (12).jpeg', alt: 'Memory' },
+    { id: 46, src: './new_pics/WhatsApp Image 2026-08-10 at 11.07.19 PM.jpeg', alt: 'Memory' }
   ];
 
-  // We duplicate the photos once to create a seamless infinite scrolling loop
-  const reelPhotos = [...photoData, ...photoData];
-  const [hoveredId, setHoveredId] = useState(null);
+  const [selectedPhoto, setSelectedPhoto] = useState(null);
 
   return (
     <div id="content">
@@ -39,7 +67,6 @@ function Contact() {
           alt="Group photo of Plaksha University students (UG 24), including Sartajdeep Singh" 
           style={{ width: '100%', maxWidth: '100%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '5px' }} 
         />
-        
       </div>
 
       <div className="left" style={{ textAlign: 'left' }}>
@@ -73,22 +100,23 @@ function Contact() {
         </p>
       </div>
 
-      {/* Film Reel Section */}
-      <div className="film-reel-container">
-        <div className="film-reel-track">
-          {reelPhotos.map((photo, index) => (
+      {/* Clean Photo Collage Grid Section */}
+      <div className="photo-collage-wrapper">
+        <h2 className="photo-collage-title">Memories & Gallery</h2>
+        <div className="photo-collage-grid">
+          {photoData.map((photo) => (
             <div
-              key={`${photo.id}-${index}`}
-              className="film-reel-item"
-              onMouseEnter={() => setHoveredId(`${photo.id}-${index}`)}
-              onMouseLeave={() => setHoveredId(null)}
+              key={photo.id}
+              className="photo-collage-item"
+              onClick={() => setSelectedPhoto(photo)}
             >
               <img
                 src={photo.src}
                 alt={photo.alt}
+                loading="lazy"
               />
-              {hoveredId === `${photo.id}-${index}` && (
-                <div className="film-reel-alt-text">
+              {photo.alt !== 'Memory' && (
+                <div className="photo-collage-caption">
                   {photo.alt}
                 </div>
               )}
@@ -96,6 +124,29 @@ function Contact() {
           ))}
         </div>
       </div>
+
+      {/* Lightbox Modal */}
+      {selectedPhoto && (
+        <div
+          className="collage-lightbox-overlay"
+          onClick={() => setSelectedPhoto(null)}
+        >
+          <div className="collage-lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="collage-lightbox-close"
+              onClick={() => setSelectedPhoto(null)}
+            >
+              &times;
+            </button>
+            <img src={selectedPhoto.src} alt={selectedPhoto.alt} />
+            {selectedPhoto.alt !== 'Memory' && (
+              <div className="collage-lightbox-caption">
+                {selectedPhoto.alt}
+              </div>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
