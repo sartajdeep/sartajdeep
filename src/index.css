@@ -806,3 +806,31 @@ li {
   line-height: 1;
 }
 
+/* Security & Anti-Screenshot Protections */
+body {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}
+
+body.blurred-screen {
+  filter: blur(35px) grayscale(100%);
+  opacity: 0.05;
+  transition: filter 0.1s ease, opacity 0.1s ease;
+}
+
+@media print {
+  html, body {
+    display: none !important;
+  }
+}
+
