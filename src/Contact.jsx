@@ -14,7 +14,7 @@ function Contact() {
     { id: 9, src: './Photos/lalitagarwal.jpg', alt: 'Photo with Lalit Agarwal and Mukul Agarwal' },
     { id: 10, src: './Photos/LKG.jpg', alt: 'LKG (Lower Kindergarten)' },
     { id: 11, src: './Photos/lohri.jpg', alt: 'Lohri celebration' },
-    { id: 12, src: './Photos/mathlab.jpg', alt: 'Math Lab at Spring Dale' },
+    { id: 12, src: './Photos/mathlab.jpg', alt: 'Math Lab' },
     { id: 13, src: './Photos/mechatronics.JPG', alt: 'Mechatronics class at Plaksha' },
     { id: 14, src: './Photos/mohitthukral.jpg', alt: 'Photo with Mohit Thukral' },
     { id: 15, src: './Photos/mumbai.jpg', alt: 'Mumbai' },
@@ -61,10 +61,10 @@ function Contact() {
       </h1>
 
       <div style={{ gridColumn: '1 / -1', textAlign: 'center', marginBottom: '40px' }}>
-        <img 
-          src="./plaksha_group_pic.jpeg" 
-          alt="Group photo of Plaksha University students (UG 24), including Sartajdeep Singh" 
-          style={{ width: '100%', maxWidth: '100%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '5px' }} 
+        <img
+          src="./plaksha_group_pic.jpeg"
+          alt="Group photo of Plaksha University students (UG 24), including Sartajdeep Singh"
+          style={{ width: '100%', maxWidth: '100%', height: 'auto', display: 'block', margin: '0 auto', borderRadius: '5px' }}
         />
       </div>
 
@@ -72,9 +72,9 @@ function Contact() {
         <div style={{ marginBottom: '30px' }}>
           <strong>Contact Info:</strong><br /><br />
           Email: <a href="mailto:sartajdeep.s.ug24@plaksha.edu.in">sartajdeep.s.ug24@plaksha.edu.in</a><br />
-              <a href="mailto:sartajdeepsingh2005@gmail.com">sartajdeepsingh2005@gmail.com</a><br />
+          <a href="mailto:sartajdeepsingh2005@gmail.com">sartajdeepsingh2005@gmail.com</a><br />
           Phone: <a href="tel:+916284696136">+91-6284696136</a><br />
-          Location: Amritsar, Punjab, India 143001  <br/>Plaksha University, Mohali, Punjab, India 140306
+          Location: Amritsar, Punjab, India 143001  <br />Plaksha University, Mohali, Punjab, India 140306
         </div>
 
         <div className="entry">
