@@ -6,7 +6,7 @@ function Contact() {
     { id: 1, src: './Photos/bio.JPG', alt: 'Sartajdeep Singh with Avni Gaur, Kanav Nanda, and Atri Tejaswi during Biomimicry class' },
     { id: 2, src: './Photos/class2.jpg', alt: 'Group photo at Spring Blossom School, Class 2' },
     { id: 3, src: './Photos/class12.jpg', alt: 'Group photo at Spring Dale Senior School, Class 12' },
-    { id: 4, src: './Photos/delhigurudwara.jpg', alt: 'Group photo at Gurudwara Bangla Sahib, Delhi' },
+    { id: 4, src: './Photos/delhigurudwara.jpg', alt: 'Gurudwara Bangla Sahib, Delhi' },
     { id: 5, src: './Photos/fieldvisit.JPG', alt: 'Sartajdeep Singh with Rudra Satwik and Shourrya Gupta during field visit' },
     { id: 6, src: './Photos/gaganhasteer.jpg', alt: 'Sartajdeep Singh with Gagan Hasteer (VP Content @ Netflix)' },
     { id: 7, src: './Photos/goldentemple.jpg', alt: 'Golden Temple, Amritsar' },
