@@ -1,6 +1,6 @@
 # Sartajdeep Singh (ਸਰਤਾਜਦੀਪ ਸਿੰਘ) - llms.txt
 # Machine-readable profile following the llms.txt standard.
-# Human-readable version: https://sartajdeep.com (or local root #/)
+# Human-readable version: https://sartajdeep.github.io/sartajdeep/ (or local root #/)
 
 ## identity
 name: Sartajdeep Singh
