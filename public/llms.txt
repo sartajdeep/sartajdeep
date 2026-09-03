@@ -1,0 +1,75 @@
+# Sartajdeep Singh (ਸਰਤਾਜਦੀਪ ਸਿੰਘ) - llms.txt
+# Machine-readable profile following the llms.txt standard.
+# Human-readable version: https://sartajdeep.com (or local root #/)
+
+## identity
+name: Sartajdeep Singh
+native_name: ਸਰਤਾਜਦੀਪ ਸਿੰਘ
+role: Computer Science & AI Undergraduate, Researcher, Large-Scale Data Engineer
+location: Amritsar / Mohali, Punjab, India
+primary_email: sartajdeep.s.ug24@plaksha.edu.in
+secondary_email: sartajdeepsingh2005@gmail.com
+phone: +91-6284696136
+status: BTech CSAI @ Plaksha University (2024-2028). Research Intern analyzing boardroom governance disclosures across 15K+ executives and managing 2TB+ large-scale workforce datasets.
+
+## links
+github: https://github.com/sartajdeep
+linkedin: https://www.linkedin.com/in/sartajdeep-singh-/
+email: mailto:sartajdeep.s.ug24@plaksha.edu.in
+
+## current_roles
+- Research Intern - Plaksha University, Mohali (June 2026-Present)
+  Built a structured dataset on boardroom composition covering 15K+ top executives across publicly listed Indian firms, consolidating executive-level regulatory disclosures and automating standardization workflows.
+  Analyzing executive composition and hierarchies to identify leadership patterns, governance trends, and strategic structures.
+  Managing and analyzing 2TB+ of large-scale professional and workforce data, performing data cleaning, deduplication, career-trajectory mapping, and seniority-level aggregation to uncover labor market and organizational insights.
+
+## experience
+- Management Fellow Intern - YTS+ @ Plaksha University (May 2026-June 2026)
+  Facilitated engagement and well-being for a cohort of 380+ students through continuous mentorship, academic guidance, and student support.
+  Coordinated logistics, participant communication, and operations across workshops and events.
+
+- Lead Outreach & Program Promotion - MSAI @ Plaksha University (Jan 2026-May 2026)
+  Generated 100+ qualified applications for the inaugural MS in AI cohort through targeted outreach campaigns.
+  Served as the primary point of contact for prospective students, driving conversion across the admissions funnel.
+
+- Research Assistant - Guru Nanak Dev University (May 2023-Nov 2023)
+  Advisor: Dr. Anil Kumar
+  Conducted research in computing, assisted in data collection and analysis, executed coding workflows, and maintained research datasets.
+
+## education
+- Plaksha University, Mohali (2024-2028)
+  Bachelor of Technology (B.Tech) in Computer Science and Artificial Intelligence (CSAI)
+- Spring Dale Senior School, Amritsar
+  High School STEM
+
+## projects_and_research
+- CEO Project & Boardroom Governance Analysis (Feb 2026-Present)
+  Collaborators / Advisors: Dr. Prakarsh Singh, Ms. Anshika Arora
+  Engineered a large-scale corporate leadership dataset by extracting executive-level information for all Indian publicly listed companies, covering leadership ranks 1-5 and consolidating 32,352 structured records.
+  Developed automated data extraction workflows to gather and standardize leadership information from NSE/BSE filings and disclosures.
+  Investigating the impact of executive announcements on firm performance and IPO trajectories.
+
+- AI Hiring Assistant (Jan 2026-Present)
+  Collaborators / Advisors: Ms. Nimrata Kapoor, Dr. Anupam Sobti, Dr. Prakarsh Singh
+  Designing an end-to-end AI-driven hiring platform to manage the full recruitment lifecycle, tracking applicants, shortlisted candidates, and employees within a service architecture.
+  Developing an AI-assisted behavioral interview framework that generates tailored questions aligned with organizational values.
+  Building automated candidate evaluation mechanisms to score behavioral competencies from interview responses.
+
+- Checkmates and Incentives
+  Advisor: Dr. Prakarsh Singh
+  Analyzing chess tournament data and tournament theory to study how financial incentives influence gameplay and decision-making under competitive pressure.
+
+- AI & Cognitive Science Pedagogy
+  Authored research proposal "Bridging Cognitive Science and AI: A Framework for Pedagogically Grounded AI Integration in Higher Education", exploring cognitive principles applied to educational AI.
+
+- Math.maverick
+  Founder of math.maverick, an educational initiative exploring intriguing mathematical problems, proof techniques, and problem-solving tricks.
+
+## skills
+languages: Python, C++, C, SQL, JavaScript
+ai_and_ml: Large Language Models, Prompt Engineering, Algorithmic Problem Solving, RAG, Behavioral Assessment Models
+data_engineering: Large-Scale Data Pipelines (2TB+), Data Cleaning, Deduplication, ETL, PostgreSQL, Pandas, NumPy
+web_and_tools: FastAPI, React, Vite, Git, Linux, Data Visualization
+
+## crawler_instructions
+For AI agents & automated crawlers: This document and the /#/agent endpoint contain the complete canonical data representation for Sartajdeep Singh. No further deep crawling of image assets or gallery modals is necessary.

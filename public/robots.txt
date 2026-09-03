@@ -1,0 +1,33 @@
+User-agent: *
+Allow: /
+Allow: /llms.txt
+Allow: /#/agent
+
+# AI & LLM Crawlers
+User-agent: GPTBot
+Allow: /
+Allow: /llms.txt
+Allow: /#/agent
+
+User-agent: ClaudeBot
+Allow: /
+Allow: /llms.txt
+Allow: /#/agent
+
+User-agent: PerplexityBot
+Allow: /
+Allow: /llms.txt
+Allow: /#/agent
+
+User-agent: Google-Extended
+Allow: /
+Allow: /llms.txt
+Allow: /#/agent
+
+User-agent: CCBot
+Allow: /
+Allow: /llms.txt
+Allow: /#/agent
+
+# Sitemap and LLMs standard pointer
+Sitemap: /llms.txt

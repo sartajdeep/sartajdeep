@@ -4,11 +4,13 @@ import Experience from './Experience';
 import Projects from './Projects';
 import Contact from './Contact';
 import Acknowledgements from './Acknowledgements';
+import Agent from './Agent';
 
-function Header({ currentPath, navigate }) {
+function Header({ currentPath, navigate, isAgent }) {
   const normalizedPath = currentPath.toLowerCase();
 
   const isLinkActive = (path) => {
+    if (isAgent) return false;
     if (path.includes('experience') && normalizedPath.includes('experience')) return true;
     if (path.includes('projects') && normalizedPath.includes('projects')) return true;
     if (path.includes('contact') && normalizedPath.includes('contact')) return true;
@@ -41,39 +43,69 @@ function Header({ currentPath, navigate }) {
         </div>
       </div>
 
-      <nav className="header-nav">
-        {navItems.map((item, index) => {
-          if (item.external) {
+      <div className="header-right-group">
+        <nav className="header-nav">
+          {navItems.map((item, index) => {
+            if (item.external) {
+              return (
+                <a
+                  key={index}
+                  href={item.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  download={item.download}
+                  className="nav-link"
+                >
+                  {item.label}
+                </a>
+              );
+            }
+
+            const active = isLinkActive(item.href);
             return (
               <a
                 key={index}
                 href={item.href}
-                target="_blank"
-                rel="noreferrer"
-                download={item.download}
-                className="nav-link"
+                onClick={(e) => {
+                  e.preventDefault();
+                  navigate(item.href);
+                }}
+                className={`nav-link ${active ? 'active' : ''}`}
               >
                 {item.label}
               </a>
             );
-          }
+          })}
+        </nav>
 
-          const active = isLinkActive(item.href);
-          return (
-            <a
-              key={index}
-              href={item.href}
-              onClick={(e) => {
-                e.preventDefault();
-                navigate(item.href);
-              }}
-              className={`nav-link ${active ? 'active' : ''}`}
-            >
-              {item.label}
-            </a>
-          );
-        })}
-      </nav>
+        {/* Human / Agent Switch */}
+        <div className="mode-toggle" role="tablist" aria-label="Audience view toggle">
+          <a
+            href="#/"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate('#/');
+            }}
+            className={`mode-toggle-btn ${!isAgent ? 'active' : ''}`}
+            aria-selected={!isAgent}
+            role="tab"
+          >
+            human
+          </a>
+          <a
+            href="#/agent"
+            onClick={(e) => {
+              e.preventDefault();
+              navigate('#/agent');
+            }}
+            className={`mode-toggle-btn ${isAgent ? 'active' : ''}`}
+            aria-selected={isAgent}
+            role="tab"
+          >
+            agent
+          </a>
+        </div>
+      </div>
     </header>
   );
 }
@@ -86,6 +118,14 @@ function App() {
     const handleHashChange = () => setCurrentPath(window.location.hash || '#/');
     window.addEventListener('hashchange', handleHashChange);
     window.addEventListener('popstate', handleHashChange);
+
+    // AI crawler & bot detection: automatically direct crawlers to agent view
+    const isBot = /bot|crawl|slurp|spider|mediapartners|gptbot|claudebot|perplexitybot|google-extended|bytespider|anthropic|cohere|diffbot/i.test(
+      navigator.userAgent
+    );
+    if (isBot && (!window.location.hash || window.location.hash === '#/')) {
+      window.location.hash = '#/agent';
+    }
 
     // Security & Anti-Screenshot Protections
     const handleContextMenu = (e) => e.preventDefault();
@@ -178,15 +218,18 @@ function App() {
 
   const normalizedPath = currentPath.toLowerCase();
 
+  const isAgent = normalizedPath.includes('agent');
   const isExperience = normalizedPath.includes('experience');
   const isProjects = normalizedPath.includes('projects');
   const isContact = normalizedPath.includes('contact');
   const isAcknowledgements = normalizedPath.includes('acknowledgements');
 
-  const isHome = !isExperience && !isProjects && !isContact && !isAcknowledgements;
+  const isHome = !isAgent && !isExperience && !isProjects && !isContact && !isAcknowledgements;
 
   let PageContent = <Home navigate={navigate} Link={Link} />;
-  if (isExperience) {
+  if (isAgent) {
+    PageContent = <Agent navigate={navigate} Link={Link} />;
+  } else if (isExperience) {
     PageContent = <Experience navigate={navigate} Link={Link} />;
   } else if (isProjects) {
     PageContent = <Projects navigate={navigate} Link={Link} />;
@@ -198,7 +241,7 @@ function App() {
 
   return (
     <>
-      {!isHome && (
+      {!isHome && !isAgent && (
         <button 
           className="back-to-home" 
           onClick={() => navigate('#/')} 
@@ -208,12 +251,12 @@ function App() {
         </button>
       )}
 
-      <Header currentPath={currentPath} navigate={navigate} />
+      <Header currentPath={currentPath} navigate={navigate} isAgent={isAgent} />
 
       {PageContent}
 
       <div id="footer">
-        <Link href="#/">main</Link> | <Link href="#/experience">experience</Link> | <Link href="#/projects">Projects</Link> | <Link href="#/contact">contact and bio</Link> | <Link href="#/acknowledgements">acknowledgements</Link>
+        <Link href="#/">main</Link> | <Link href="#/experience">experience</Link> | <Link href="#/projects">Projects</Link> | <Link href="#/contact">contact and bio</Link> | <Link href="#/acknowledgements">acknowledgements</Link> | <Link href="#/agent">agent view</Link>
       </div>
     </>
   );
