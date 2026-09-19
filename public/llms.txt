@@ -43,27 +43,26 @@ email: mailto:sartajdeep.s.ug24@plaksha.edu.in
   High School STEM
 
 ## projects_and_research
-- CEO Project & Boardroom Governance Analysis (Feb 2026-Present)
-  Collaborators / Advisors: Dr. Prakarsh Singh, Ms. Anshika Arora
-  Engineered a large-scale corporate leadership dataset by extracting executive-level information for all Indian publicly listed companies, covering leadership ranks 1-5 and consolidating 32,352 structured records.
-  Developed automated data extraction workflows to gather and standardize leadership information from NSE/BSE filings and disclosures.
-  Investigating the impact of executive announcements on firm performance and IPO trajectories.
+- AI Powered Geospatial IDE - DISHA (July 2026-Present)
+  Advisor: Dr. Anupam Sobti
+  Built a desktop IDE for urban planners to run GIS analysis in simple English prompts using React, FastAPI, and Electron.
+  Engineered an MCP tool server across 8 domain engines to analyze transit feeds, zoning rules, land use, and demographics.
+  Integrated Google Earth Engine satellite data and GTFS transit feeds to compute optimal multimodal routes.
+  Streamed model actions and tool calls over WebSockets to render live geospatial vector layers on the map canvas.
 
-- AI Hiring Assistant (Jan 2026-Present)
-  Collaborators / Advisors: Ms. Nimrata Kapoor, Dr. Anupam Sobti, Dr. Prakarsh Singh
-  Designing an end-to-end AI-driven hiring platform to manage the full recruitment lifecycle, tracking applicants, shortlisted candidates, and employees within a service architecture.
-  Developing an AI-assisted behavioral interview framework that generates tailored questions aligned with organizational values.
-  Building automated candidate evaluation mechanisms to score behavioral competencies from interview responses.
+- AI Hiring Platform - HIRIS (Jan 2026-May 2026)
+  Advisors: Dr. Anupam Sobti, Dr. Prakarsh Singh
+  Designed a full-stack ATS to unify institutional hiring in one secure, role-based platform on React, Node.js, and PostgreSQL.
+  Built an interactive interview room that prompts real-time AI questions tailored to candidate resumes and conversations.
+  Integrated institutional policy document parsing to evaluate candidate alignment with organization core values.
+  Maintained a detailed, structured log of every AI and human interview review and candidate conversation for seamless handoff to the next interviewer.
 
-- Checkmates and Incentives
-  Advisor: Dr. Prakarsh Singh
-  Analyzing chess tournament data and tournament theory to study how financial incentives influence gameplay and decision-making under competitive pressure.
-
-- AI & Cognitive Science Pedagogy
-  Authored research proposal "Bridging Cognitive Science and AI: A Framework for Pedagogically Grounded AI Integration in Higher Education", exploring cognitive principles applied to educational AI.
-
-- Math.maverick
-  Founder of math.maverick, an educational initiative exploring intriguing mathematical problems, proof techniques, and problem-solving tricks.
+- ML - Framing Bias Detection (Jan 2026-May 2026)
+  Advisor: Dr. Siddharth
+  Built a model to detect framing bias hidden in everyday news headlines by training XGBoost and Random Forest models.
+  Fused 28 engineered linguistic features with 768-dimensional transformer embeddings to capture framing signals.
+  Outperformed published academic benchmarks by 8.8 F1 points with a statistically significant 0.888 Macro-F1.
+  Developed an ordinal ridge regression model that reduced bias scoring error by 60% over zero-shot LLM baselines.
 
 ## skills
 languages: Python, C++, C, SQL, JavaScript

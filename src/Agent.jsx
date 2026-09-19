@@ -132,33 +132,21 @@ function Agent() {
           <h2>projects & research</h2>
           <ul className="agent-list">
             <li>
-              <strong>CEO Project & Corporate Governance Dataset</strong> <span>Feb 2026-present &middot; with Dr. Prakarsh Singh, Ms. Anshika Arora</span>
+              <strong>AI Powered Geospatial IDE - DISHA</strong> <span>July 2026-present &middot; with Dr. Anupam Sobti</span>
               <div className="agent-desc">
-                Engineered large-scale corporate leadership dataset by extracting executive records for all Indian publicly listed companies (ranks 1-5, 32,352 records); automated NSE/BSE filings extraction; studying correlations between CEO appointments and IPO performance.
+                Desktop IDE for urban planners to run GIS analysis via English prompts using React, FastAPI, Electron; MCP tool server across 8 domain engines (transit, zoning, land use, demographics); integrated Google Earth Engine satellite data and GTFS transit feeds; WebSocket streaming for live vector layers.
               </div>
             </li>
             <li>
-              <strong>AI Hiring Assistant</strong> <span>Jan 2026-present &middot; with Ms. Nimrata Kapoor, Dr. Anupam Sobti, Dr. Prakarsh Singh</span>
+              <strong>AI Hiring Platform - HIRIS</strong> <span>Jan 2026-May 2026 &middot; with Dr. Anupam Sobti, Dr. Prakarsh Singh</span>
               <div className="agent-desc">
-                Full-lifecycle AI recruitment architecture storing and tracking applicant data; AI-assisted behavioral interview framework generating value-aligned questions and automated candidate competency scoring.
+                Full-stack ATS for institutional hiring (React, Node.js, PostgreSQL); interactive interview room with real-time AI question prompts tailored to candidate resumes; institutional policy parsing for core values alignment; detailed structured review logging.
               </div>
             </li>
             <li>
-              <strong>Checkmates & Incentives</strong> <span>Advisor: Dr. Prakarsh Singh</span>
+              <strong>ML - Framing Bias Detection</strong> <span>Jan 2026-May 2026 &middot; with Dr. Siddharth</span>
               <div className="agent-desc">
-                Analyzing chess tournament datasets and tournament theory to measure the impact of financial stakes and prize structures on player decision-making.
-              </div>
-            </li>
-            <li>
-              <strong>AI & Cognitive Science Pedagogy</strong>
-              <div className="agent-desc">
-                Authoring framework proposal: &ldquo;Bridging Cognitive Science and AI: A Framework for Pedagogically Grounded AI Integration in Higher Education&rdquo;.
-              </div>
-            </li>
-            <li>
-              <strong>math.maverick</strong>
-              <div className="agent-desc">
-                Founder of math.maverick, dedicated to exploring intriguing mathematical questions, proof techniques, and clever problem-solving tricks.
+                News headline framing bias detection using XGBoost & Random Forest; fused 28 engineered linguistic features with 768-dim transformer embeddings; achieved 0.888 Macro-F1 (+8.8 F1 over published benchmarks); ordinal ridge regression model reducing bias scoring error by 60% vs zero-shot LLMs.
               </div>
             </li>
           </ul>
