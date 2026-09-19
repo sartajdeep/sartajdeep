@@ -2,7 +2,7 @@ function Home() {
   return (
     <div id="content">
         <div className="left">
-          <img src="./SARTAJDEEP_SINGH.PHOTO.png" alt="Sartajdeep Singh" />
+          <img src="./sartajdeep_image.png" alt="Sartajdeep Singh" />
           <p style={{ textAlign: 'center' }}>
             <a href="mailto:sartajdeep.s.ug24@plaksha.edu.in" target="_blank" rel="noreferrer">sartajdeep.s.ug24@plaksha.edu.in</a>
           </p>
