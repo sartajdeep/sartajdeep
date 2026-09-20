@@ -256,7 +256,10 @@ function App() {
       {PageContent}
 
       <div id="footer">
-        <Link href="#/">main</Link> | <Link href="#/experience">experience</Link> | <Link href="#/projects">Projects</Link> | <Link href="#/contact">contact and bio</Link> | <Link href="#/acknowledgements">acknowledgements</Link> | <Link href="#/agent">agent view</Link>
+        <div className="footer-links">
+          <Link href="#/">main</Link> | <Link href="#/experience">experience</Link> | <Link href="#/projects">Projects</Link> | <Link href="#/contact">contact and bio</Link> | <Link href="#/acknowledgements">acknowledgements</Link> | <Link href="#/agent">agent view</Link>
+        </div>
+        <div className="footer-updated">Last updates — 19th September 2026</div>
       </div>
     </>
   );

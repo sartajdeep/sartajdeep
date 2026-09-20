@@ -325,12 +325,29 @@ li {
   text-align: center;
 }
 #footer {
+  position: relative;
   width: 100%;
-  padding: 20px 0;
+  padding: 20px 0 18px;
   text-align: center;
   font-weight: 300;
   border-top: 1px solid #ddd;
   margin-top: 80px;
+}
+
+.footer-links {
+  display: block;
+}
+
+.footer-updated {
+  position: absolute;
+  right: 16px;
+  bottom: 10px;
+  font-size: 0.62rem;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: #555;
+  white-space: nowrap;
 }
 
 .calendar {
