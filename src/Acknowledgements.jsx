@@ -182,7 +182,7 @@ function Acknowledgements() {
           A special mention to the wonderful students I had the privilege to mentor during <strong>YTS+</strong>. They taught me so much, were exceptionally respectful, and made the experience truly unforgettable, even forming a football team named <strong>Sartaj FC</strong>:
         </p>
         <p style={{ lineHeight: '1.8em' }}>
-          Vijith Kapoor, Vishvag Taneja, Shiv Ahuja, Rishi Gupta, Abhaya Singh, Advik Shanker Agarwal, Anjaney Pandey, Zoharfateh Singh Deepak, Nalin Chandra, Reyansh Chaudhari, Niyant, Sarthak Singla, Reyansh Agarwalla, Mahir Goradia.
+          Vijith, Vishvag, Shiv, Rishi, Abhaya, Advik, Anjaney, Zoharfateh, Nalin, Reyansh, Niyant, Sarthak, Reyansh, Mahir.
         </p>
         <hr />
 

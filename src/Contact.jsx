@@ -31,14 +31,14 @@ function Contact() {
     { id: 24, src: './Photos/Field Visit with Group 32- Ishita, Hussein, Mannan Sharma.jpeg', alt: 'Field Visit with Group 32 - Ishita, Hussein, Mannan Sharma' },
     { id: 25, src: './Photos/Field Visit.jpeg', alt: 'Field Visit' },
     { id: 26, src: './Photos/Fooling around with batchmates.jpeg', alt: 'Fooling around with batchmates' },
-    { id: 27, src: './Photos/GOAT Advik- winner of Badminton Doubles at YTS+ .jpeg', alt: 'GOAT Advik - winner of Badminton Doubles at YTS+' },
+    { id: 27, src: './Photos/GOAT Advik- winner of Badminton Doubles at YTS+ .jpeg', alt: 'Some memories are forever' },
     { id: 28, src: './Photos/GOAT kids @YTS+.jpeg', alt: 'GOAT kids @ YTS+' },
     { id: 29, src: "./Photos/Kanav's Surprise Birthday Celebration.jpeg", alt: "Kanav's Surprise Birthday Celebration" },
     { id: 30, src: './Photos/Nalin and Sartaj.jpeg', alt: 'Nalin and Sartaj' },
     { id: 31, src: './Photos/Niyant and Sartaj.jpeg', alt: 'Niyant and Sartaj' },
     { id: 32, src: "./Photos/Niyant's Phone wallpaper - with me .jpeg", alt: "Niyant's Phone wallpaper - with me" },
     { id: 33, src: './Photos/Reyansh and Sartaj.jpeg', alt: 'Reyansh and Sartaj' },
-    { id: 34, src: './Photos/Reyansh, Sartaj and Sarthak (insider reference - GOTH).jpeg', alt: 'Reyansh, Sartaj and Sarthak (insider reference - GOTH)' },
+    { id: 34, src: './Photos/Reyansh, Sartaj and Sarthak (insider reference - GOTH).jpeg', alt: 'Reyansh, Sartaj and Sarthak (insider reference - HPUI)' },
     { id: 35, src: './Photos/Sartaj and Abhaya.jpeg', alt: 'Sartaj and Abhaya' },
     { id: 36, src: './Photos/Sartaj and Nalin.jpeg', alt: 'Sartaj and Nalin' },
     { id: 37, src: './Photos/Sartaj and Sameera.jpeg', alt: 'Sartaj and Sameera' },
@@ -73,7 +73,6 @@ function Contact() {
           <strong>Contact Info:</strong><br /><br />
           Email: <a href="mailto:sartajdeep.s.ug24@plaksha.edu.in">sartajdeep.s.ug24@plaksha.edu.in</a><br />
           <a href="mailto:sartajdeepsingh2005@gmail.com">sartajdeepsingh2005@gmail.com</a><br />
-          Phone: <a href="tel:+916284696136">+91-6284696136</a><br />
           Location: Amritsar, Punjab, India 143001  <br />Plaksha University, Mohali, Punjab, India 140306
         </div>
 
